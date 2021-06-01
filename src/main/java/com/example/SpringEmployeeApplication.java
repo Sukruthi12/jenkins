@@ -9,14 +9,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 @SpringBootApplication
 public class SpringEmployeeApplication extends SpringBootServletInitializer {
 	
-	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-         return application.sources(SpringbootFoodApplication.class);
-    }
-
+	
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context=SpringApplication.run(SpringEmployeeApplication.class, args);
 		
 	}
+	@Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+         return application.sources(SpringEmployeeApplication.class);
+    }
 
 }
